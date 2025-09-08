@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>January 1</title>
+  <link rel="icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F2C5C7;
+      color: #29335C;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+	  position: absolute;
+	  width: 500px;
+	  margin: auto;
+	  top: 50%;  
+	  left: 50%;  
+	  transform: translate(-50%, -50%);
+	  padding: 140px;
+	  border-radius: 12px;
+	  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+	  text-align: center;
+	  color: #000000;
+
+	  background: url("newyear.jpg") no-repeat center center;
+	  background-size: cover;
+	}
+	.container::before {
+	  content: "";
+	  position: absolute;
+	  top: 0; left: 0; right: 0; bottom: 0;
+	  background: rgba(200,200,200,0.4);
+	  border-radius: 12px;
+	  z-index: 0;
+	}
+	.container > * {
+	  position: relative;
+	  z-index: 1;
+	}
+    h1 {
+      color: #FFFFFF;
+    }
+    img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    p {
+      font-size: 1.3em;
+      line-height: 1.1;
+	  font-weight: bold;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: white;
+      background: #FB6F92;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+    a:hover {
+      background: #D63B6C;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+	<h1>New Year's Day</h1>
+    <p>
+      New Year's Day is celebrated every January 1 to mark the start of the new calendar year.  
+      It is one of the most widely observed holidays in the Philippines and around the world.  
+      Families gather, fireworks light up the sky, and people welcome the new year with hope  
+      and fresh beginnings.
+    </p>
+    <a href="jan.html">Back</a>
+  </div>
+</body>
+</html>

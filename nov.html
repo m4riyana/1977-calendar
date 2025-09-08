@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>November</title>
+	<link rel="icon" href="favicon.ico">
+    <style>
+        body {
+  padding-top: 5vh;
+  background-color: #bdc8d3;
+}
+
+.calendar {
+  position: relative;
+  margin: auto;
+  width: 70vw;
+  height: 70vw;
+}
+
+.base {
+  width: 70%;
+  height: 45%;
+  border-radius: 2vw;
+  box-shadow: 0.2vw 0.2vw 1vw 0 rgba(0, 0, 0, 0.27);
+  overflow: hidden;
+}
+.base.top {
+  position: absolute;
+  top: 5%;
+  left: 15%;
+  background-color: #E97A80;
+}
+.base.top .holes {
+  position: absolute;
+  top: 88%;
+  left: 4%;
+}
+.base.bottom {
+  position: absolute;
+  top: 51%;
+  left: 15%;
+  background-color: #fff;
+}
+.base.bottom .holes {
+  position: absolute;
+  top: 4%;
+  left: 4%;
+}
+.base.bottom::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 28%;
+  background-color: #E97A80;
+}
+
+.holes {
+  width: 128.5714285714%;
+  height: 200%;
+}
+.holes .hole {
+  background-color: #669BBC;
+  width: 4%;
+  height: 4%;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 3.8vw;
+  box-shadow: inset 0.2vw 0.2vw 1vw 0 rgba(0, 0, 0, 0.27);
+}
+
+.rings {
+  width: 70%;
+  height: 10%;
+  position: absolute;
+  top: 45.5%;
+  left: 17.3%;
+}
+.rings .ring {
+  width: 3.5%;
+  height: 100%;
+  display: inline-block;
+  background-color: white;
+  margin-left: 4.6vw;
+  border-radius: 70%/10%;
+  box-shadow: 0.3vw 0 0.5vw -0.2vw rgba(0, 0, 0, 0.27);
+}
+
+.year-side {
+  background-color: #FFE5EC;
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+.year-side::after {
+  content: "1977";
+  display: block;
+  color: #CC313D;
+  font-family: Roboto, sans-serif;
+  font-size: 7vw;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 35%;
+  left: -30%;
+}
+
+.month-side {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 20%;
+}
+.month-side::after {
+  content: "NOV";
+  display: block;
+  color: #FFFFFF;
+  font-family: Roboto, sans-serif;
+  font-size: 8vw;
+  position: absolute;
+  top: 35%;
+  left: 25%;
+}
+
+.days {
+  width: 90%;
+  height: 75%;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  display: grid;
+  grid-template: repeat(6, 1fr)/repeat(7, 1fr);
+  grid-gap: 0.2vw;
+}
+.days > div {
+  text-align: center;
+  padding-top: 20%;
+  font-family: Roboto, sans-serif;
+  font-size: 1.8vw;
+  color: #29335C;
+}
+.days > div.old {
+  color: #999;
+}
+.days > div.weekday {
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.days > div.holiday {
+  font-weight: bold;
+  color: #FB6F92;
+}
+.holiday a {
+  color: #FB6F92;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 100; 
+}
+.nav-links {
+    display: flex;
+    justify-content
+    space-between; 
+    margin: 20px;
+}
+
+.nav-links {
+    position: fixed;
+    bottom: 20px;        
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    padding: 0 20px;    
+    box-sizing: border-box;
+}
+.nav-links a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+	font-family: "Segoe UI", Arial, sans-serif;
+}
+.back-link {
+    background-color: #F5A6B3; 
+    color: 29335C;
+}
+.back-link:hover {
+    background-color: #E97A80;
+    transform: scale(1.05);
+}
+.next-link {
+    background-color: #F5A6B3; 
+    color: 29335C;
+}
+.next-link:hover {
+    background-color: #E97A80;
+    transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+    <div class="calendar">
+  <div class="base top">
+    <div class="year-side"></div>
+    <div class="month-side"></div>
+    <div class="holes">
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+    </div>
+  </div>
+  <div class="base bottom">
+    <div class="days">
+      <div class="weekday">SUN</div>
+      <div class="weekday">MON</div>
+      <div class="weekday">TUE</div>
+      <div class="weekday">WED</div>
+      <div class="weekday">THU</div>
+      <div class="weekday">FRI</div>
+      <div class="weekday">SAT</div>
+      <div class="old">30</div>
+      <div class="old">31</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+      <div>15</div>
+      <div>16</div>
+      <div>17</div>
+      <div>18</div>
+      <div>19</div>
+      <div>20</div>
+      <div>21</div>
+      <div>22</div>
+      <div>23</div>
+      <div>24</div>
+      <div>25</div>
+      <div>26</div>
+      <div>27</div>
+      <div>28</div>
+      <div>29</div>
+      <div class="holiday"><a href="holiday_nov30.html">30</a></div>
+      <div class="old">1</div>
+      <div class="old">2</div>
+      <div class="old">3</div>
+    </div>
+    <div class="holes">
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+    </div>
+   </div>
+    <div class="rings">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+    </div>
+   <div class="nav-links">
+    <a class="back-link" href="oct.html">Back</a>
+    <a class="next-link" href="dec.html">Next</a>
+   </div>
+</body>
+</html>

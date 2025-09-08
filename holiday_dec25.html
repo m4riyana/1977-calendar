@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>December 25</title>
+  <link rel="icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F2C5C7;
+      color: #29335C;
+      margin: 0;
+      padding: 30px;
+    }
+    .container {
+	  position: absolute;
+	  width: 700px;
+	  margin: auto;
+	  top: 50%;  
+	  left: 50%;  
+	  transform: translate(-50%, -50%);
+	  padding: 130px;
+	  border-radius: 12px;
+	  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+	  text-align: center;
+	  color: #000000;
+
+	  background: url("christmas.jpg") no-repeat center center;
+	  background-size: cover;
+	}
+	.container::before {
+	  content: "";
+	  position: absolute;
+	  top: 0; left: 0; right: 0; bottom: 0;
+	  background: rgba(200,200,200,0.5);
+	  border-radius: 12px;
+	  z-index: 0;
+	}
+	.container > * {
+	  position: relative;
+	  z-index: 1;
+	}
+    h1 {
+	  color: #FFFFFF;
+    }
+    p {
+	  font-size: 1.1em;
+      line-height: 1.1;
+	  font-weight: bold;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: white;
+      background: #FB6F92;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+    a:hover {
+      background: #D63B6C;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Christmas Day</h1>
+    <p>
+      Christmas Day, celebrated every December 25, marks the birth of Jesus Christ.  
+      It is one of the most important Christian holidays and is observed with joy, family gatherings,  
+      gift-giving, and festive traditions around the world.  
+    </p>
+    <p>
+      In the Philippines, Christmas is a major celebration, known for its long holiday season,  
+      colorful decorations, midnight masses (<em>Simbang Gabi</em>), and the spirit of giving.  
+    </p>
+    <a href="dec.html">Back</a>
+  </div>
+</body>
+</html>
